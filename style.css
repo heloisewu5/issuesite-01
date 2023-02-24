@@ -1,0 +1,426 @@
+
+/*Menu*/
+
+* {
+	box-sizing: border-box;
+}
+
+.topnav {
+	text-align: right;
+	padding: 10px 10px;
+	background-color: transparent;
+	font-style: normal;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	margin:30px 10px;
+}
+
+.topnav a {
+	color: black;
+	padding: 15px 15px;
+	border-radius: 100px;
+	text-align: center;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+	color: #F2E9CE;
+  background-color: black;
+  text-decoration: none;
+  pointer
+}
+
+
+
+/*Texts*/
+
+header{
+	font-size: 80px;
+	font-weight: 1000;
+	font-style: normal;
+	margin: 5px;
+}
+
+#header2 {
+	margin: 0px 50px;
+}
+
+#header3 {
+	margin: 0px 285px;
+}
+
+
+h1 {
+	font-size: 75px;
+	font-weight: 1000;
+	font-style: bold;
+	text-align: center;
+	margin: 10px 50px;
+}
+
+h2 {
+	font-size: 40px;
+	font-weight: 1000;
+	font-style: bold;
+	text-align: center;
+	margin: 10px 50px;
+}
+
+h3{
+	font-size: 65px;
+	font-weight: 1000;
+	font-style: normal;
+	text-align: left;
+	margin: 10px 50px;
+}
+
+
+body {
+	background-color:#F2E9CE;
+	background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+	font-family: "basic-sans", snas-serif;
+}
+
+p {
+	font-size: 20px;
+	text-align: left;
+}
+
+
+
+/*Homepage text & 2 but*/
+
+.flex-container {
+    display: flex;
+}
+
+#hometext {
+	font-size: 23px;
+	text-align:left;
+	margin: 50px 20px;
+	padding: 10px 10px;
+}
+
+#bodytext{
+	margin: 0px 300px;
+}
+
+.hometextdiv {
+    flex: -3;
+    height: 400px;
+    width: 800px;
+    border: transparent;
+    margin: -30px 18px;
+}  
+
+.butdiv:first-child {
+		flex: 0;
+    height: 500px;
+    width: 200px;
+    margin: 50px 50px;
+    border: transparent;
+} 
+
+
+.button {
+	font-size: 40px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;
+  background-color: transparent;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100px;
+  margin: 20px 20px;
+}
+
+/* PROF NOTE:
+		In order to "reveal" a popup we need to nest that popup *inside*
+		the thing we are hovering over.
+
+		We create a fixed DIV the size of the screen ("infoPopup") that will be used
+		to help center and position the content of our popup ("popupInner").
+
+		We set the default "opacity" to 0, and when hovered, set the opacity to 1.
+		Using "transition" fades the opacity as it changes.
+*/
+
+.hoverContainer > .infoPopup {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.0;
+	transition: opacity 0.25s;
+	pointer-events: none; /* PROF NOTE: Because this div exists on "top" of all the other content,
+													even when it is hidden, it will block the mouse cursor from being able to interact with other things on the page.
+													To fix this we can set "pointer-events: none" to make this element ignore the cursor */
+}
+
+
+.hoverContainer:hover > .infoPopup {
+	opacity: 1.0;
+}
+
+.infoPopup > .popupInner {
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* PROF NOTE: This trick allows us to center vertically and horizontally– something we can do much more simply with Flexbox once we learn it. */
+	font-weight: bold;
+	background-color: #eee;
+	border: 2px solid black;
+	border-radius: 25px;
+	padding: 25px;
+	width: 45%;
+  margin: 0;
+}
+
+
+.button:hover {
+  background-color: #FFFFFF;
+  color:#black;
+}
+
+
+
+/*secondpage*/
+
+.buttonB {
+	font-size: 35px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;
+  background-color: #FFFFFF;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 30px 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100px;
+  margin: 10px 27px;
+}
+
+.buttonB:hover {
+  background-color: transparent;
+  color:black;
+}
+
+
+#div1 {
+    display: inline-block;
+    margin: 30px 45px;
+}
+
+#div2 {
+    display: inline-block;
+    margin: 30px 45px;
+}
+
+#div3 {
+    display: inline-block;    
+    margin: 30px 45px;
+}
+
+#bodytext2 {
+	margin: 10px 250px;
+	font-size: 20px;
+	text-align: left;
+}
+
+#bodytext3 {
+	margin: 20px 50px;
+	font-size: 15px;
+	text-align: center;
+}
+
+#bodytext4 {
+	font-family: "basic-sans", snas-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: left;
+}
+
+
+/*lists*/
+.list {
+	text-align: center;
+	font-size: 25px;
+	font-weight: 700;
+	font-style: normal;
+	color: #383838;
+}
+
+ul.myList {
+  display: inline-block;
+  text-align: left;
+}
+
+
+/*icons*/
+
+.astor {
+	height: 130px; 
+	width: 130px;
+	display: inline-block;
+}
+
+.smallastor {
+	height: 80px; 
+	width: 80px;
+	display: inline;
+}
+
+
+/*thirdpage*/
+
+.buttonC {
+	background-color: #C3C3C3;
+	font-size: 30px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 80px 60px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%; /* PROF NOTE: This will round the buttons into ovals, like your mockup */
+  margin: 20px 20px;
+  /* PROF NOTE: We need to provide a size for the buttons to split them evenly in the container div */
+  width: calc(34% - (20px*3)); /* PROF NOTE: If we also want to keep a margin, we can use the special "calc()" function to subtract the margin you specified in pixels, times the number of buttons, from the percentage sizing */
+	word-wrap: break-word;  /* PROF NOTE: This will wrap the text inside buttons to the next line if they are too long */
+}
+
+.buttonD {
+	background-color: #D3E0B8;
+	font-size: 30px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 80px 60px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%;
+  margin: 20px 20px;
+  width: calc(34% - (20px*3));
+	word-wrap: break-word;
+}
+
+.buttonE {
+	background-color: #F29654;
+	font-size: 30px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 80px 60px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%;
+  margin: 20px 20px;
+  width: calc(34% - (20px*3));
+	word-wrap: break-word;
+}
+
+.buttonF {
+	background-color: #F0D3EF;
+	font-size: 30px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 80px 60px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%;
+  margin: 20px 20px;
+  width: calc(34% - (20px*3));
+	word-wrap: break-word;
+}
+
+.buttonG {
+	background-color: #AFBFE2;
+	font-size: 30px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 80px 60px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%;
+  margin: 20px 20px;
+  width: calc(34% - (20px*3));
+	word-wrap: break-word;
+}
+
+.buttonH {
+	background-color: #CFDED3;
+	font-size: 30px;
+	font-family: "basic-sans", snas-serif;
+	font-style: bold;
+	font-weight: 700;;
+  border: black;
+  border-style: dashed;
+  color: black;
+  padding: 80px 60px;
+  text-align: center;
+  text-decoration: none;
+	border-radius: 50%;
+  margin: 20px 20px;
+  width: calc(34% - (20px*3));
+	word-wrap: break-word;
+}
+
+
+.buttonC:hover {
+  background-color: #FFFFFF;
+  color:black;
+}
+
+.buttonD:hover {
+  background-color: #FFFFFF;
+  color:black;
+}
+
+.buttonE:hover {
+  background-color: #FFFFFF;
+  color:black;
+}
+
+.buttonF:hover {
+  background-color: #FFFFFF;
+  color:black;
+}
+
+.buttonG:hover {
+  background-color: #FFFFFF;
+  color:black;
+}
+
+.buttonH:hover {
+  background-color: #FFFFFF;
+  color:black;
+}
